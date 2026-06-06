@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator ✦</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Background twinkling stars (created by JS) -->
+  <div class="stars" id="stars"></div>
+
+  <div class="container">
+    <div class="card">
+
+      <!-- Header -->
+      <div class="header">
+        <span class="magic-icon">✦</span>
+        <h1 class="title">How old are <em>you</em>, really?</h1>
+        <p class="subtitle">A gentle calculation of time</p>
+        <div class="divider"></div>
+      </div>
+
+      <!-- Date input -->
+      <div class="input-section">
+        <label for="dob">Your date of birth</label>
+        <div class="date-input-wrapper">
+          <span class="input-icon">◈</span>
+          <input type="date" id="dob" />
+        </div>
+      </div>
+
+      <!-- Calculate button -->
+      <button class="calc-btn" onclick="calculate()">✦ Reveal my age ✦</button>
+
+      <!-- Error message -->
+      <p class="error-msg" id="error">Please choose a date in the past, dear soul.</p>
+
+      <!-- Results -->
+      <div class="result-section" id="result">
+
+        <div class="result-header">
+          <p class="result-title">You have journeyed through...</p>
+        </div>
+
+        <!-- Big age display -->
+        <div class="age-hero">
+          <div class="age-number" id="ageYears">—</div>
+          <div class="age-unit">years on this earth</div>
+          <div class="sparkle-row">
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+          </div>
+        </div>
+
+        <!-- Months / weeks / days -->
+        <div class="details-grid">
+          <div class="detail-card">
+            <span class="detail-value" id="dMonths">—</span>
+            <span class="detail-label">months</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-value" id="dWeeks">—</span>
+            <span class="detail-label">weeks</span>
+          </div>
+          <div class="detail-card">
+            <span class="detail-value" id="dDays">—</span>
+            <span class="detail-label">days</span>
+          </div>
+        </div>
+
+        <!-- Birthday & day-of-week -->
+        <div class="extra-row">
+          <div class="extra-card">
+            <span class="extra-label">Next birthday in</span>
+            <span class="extra-value" id="nextBday">—</span>
+          </div>
+          <div class="extra-card">
+            <span class="extra-label">Day you were born</span>
+            <span class="extra-value" id="birthDay">—</span>
+          </div>
+        </div>
+
+        <!-- Zodiac -->
+        <p class="footer-note" id="zodiac"></p>
+
+      </div><!-- /result-section -->
+    </div><!-- /card -->
+  </div><!-- /container -->
+
+  <script src="script.js"></script>
+</body>
+</html>
